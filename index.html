@@ -17,10 +17,11 @@
 	        </a-assets>
 	        
 	        
-	        <a-marker type="pattern" url="resource/Demo_AR.patt">
+	        <a-marker id="marker" type="pattern" url="resource/Demo_AR.patt">
 	            
 	            <!--プリロードした３DモデルをIDで参照して表示-->
-	            <a-entity   position="0 0 0"
+	            <a-entity	id="cube_1"
+							position="0 0 0"
 	                        scale="0.5 0.5 0.5"
 	                        gltf-model="#DemoModel"
 	                        animation-mixer
@@ -31,5 +32,7 @@
 	        </a-marker>
 	        <a-entity camera></a-entity>
 	    </a-scene>
+
+		<script type="text/javascript" src="js/MultiplyCube.js"></script>
 	</body>
 </html>
