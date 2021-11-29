@@ -49,13 +49,13 @@ function increaseCube() {
         else {
             cube = document.getElementById("cube_0").cloneNode(true);
             cube.id = "cube_" + i;
+
+            
+            //追加
+            document.getElementById("marker").appendChild(cube);
         }
         //増加の方向によって代える変化
         cube.position = "0 0 " + i;
-
-        
-        //追加
-        document.getElementById("marker").appendChild(cube);
     }
 
     isVertical = !isVertical;
