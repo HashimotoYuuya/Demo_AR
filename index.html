@@ -6,28 +6,30 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <!-- glTFに含まれたアニメーションを再生するためにaframe-extrasをロード -->
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-
-<body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded arjs="debugUIEnabled: false" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
-        <a-assets>
-            <!-- 3Dモデルをプリロード -->
-            <a-asset-item id="Human" src="resource/Demo_AR.glb"></a-asset-item>
-        </a-assets>
-        
-        
-        <a-marker type="pattern" url="resource/Demo_AR.patt">
-            
-            <!--プリロードした３DモデルをIDで参照して表示-->
-            <a-entity   position="0 -1 0"
-                        scale="0.5 0.5 0.5"
-                        gltf-model="#Human"
-                        animation-mixer
-                        ></a-entity>
-            
-            <!--a-box position="0 -1 0" scale="1 1 1" color="green"></a-box-->
-            
-        </a-marker>
-        <a-entity camera></a-entity>
-    </a-scene>
-</body>
+	<head>
+		<title>橋本デモ_AR</title>
+	</head>
+	<body style="margin: 0px; overflow: hidden;">
+	    <a-scene embedded arjs="debugUIEnabled: false" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
+	        <a-assets>
+	            <!-- 3Dモデルをプリロード -->
+	            <a-asset-item id="Human" src="resource/Demo_AR.glb"></a-asset-item>
+	        </a-assets>
+	        
+	        
+	        <a-marker type="pattern" url="resource/Demo_AR.patt">
+	            
+	            <!--プリロードした３DモデルをIDで参照して表示-->
+	            <a-entity   position="0 -1 0"
+	                        scale="0.5 0.5 0.5"
+	                        gltf-model="#Human"
+	                        animation-mixer
+	                        ></a-entity>
+	            
+	            <!--a-box position="0 -1 0" scale="1 1 1" color="green"></a-box-->
+	            
+	        </a-marker>
+	        <a-entity camera></a-entity>
+	    </a-scene>
+	</body>
 </html>
