@@ -26,8 +26,8 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - name: Install Dependencies
       run: npm install
-    - name: Build
-      run: npm run build
+    #- name: Build
+     # run: npm run build
     - name: deploy to Firebase Hosting
       run: |
         firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
