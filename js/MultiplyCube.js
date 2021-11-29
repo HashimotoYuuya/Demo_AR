@@ -1,26 +1,12 @@
 
-var isDouble = true;
-var timer = null;
 
 // タッチイベント
-window.addEventListener("touchstart", function (event) {
-    console.log("touchstart");
-    timer = setInterval(isDouble ? increaseCube : decreaseCube, 1000);
-});
-   
-// タッチが離れた際のイベント
-window.addEventListener("touchend", funcStop);
-window.addEventListener("touchcancel", funcStop);
-
-function funcStop() {
-    isDouble = !isDouble;
-    console.log("funcStop");
-    this.clearInterval(timer);
-}
-
-//キューブ減少
-function decreaseCube() {
-}
+AFRAME.registerComponent('click-change', {
+    init: function () {
+        console.log("Clicked")
+        this.el.addEventListener('click', increaseCube);
+    }
+  });
 
 //キューブ増加
 var isVertical = true;
