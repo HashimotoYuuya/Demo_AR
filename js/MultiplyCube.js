@@ -2,6 +2,7 @@
 var isIncrease = true;
 var timer = null;
 
+increaseCube();
 AFRAME.registerComponent('registerevents', {
     init: function () {
         var marker = this.el;
